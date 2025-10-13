@@ -1,0 +1,21 @@
+name: ecalls_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - jupyterlab
+  - ipykernel
+  - pyyaml
+  - pyarrow
+  - tqdm
+  - seaborn
+  - rich
+  - pip:
+      - yfinance
+      - transformers
+      - torch==2.4.*+cpu --find-links https://download.pytorch.org/whl/cpu

@@ -6,3 +6,9 @@ statsmodels
 seaborn
 matplotlib
 scikit-learn
+numpy
+pyyaml
+pyarrow
+tqdm
+transformers
+
