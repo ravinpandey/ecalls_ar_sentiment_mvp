@@ -4,3 +4,93 @@ __pycache__/
 .venv/
 data/
 reports/
+# ---- Python cache & build ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+
+# ---- Virtual envs & notebooks ----
+.venv/
+.env/
+.ipynb_checkpoints/
+
+# ---- IDE / OS clutter ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---- Logs & temp ----
+*.log
+*.tmp
+*.swp
+*.swo
+
+# ---- Data: keep raw/interim out of git (reproducible) ----
+data/raw/
+data/interim/
+
+# If you want to ignore *all* heavy artifacts by default:
+# (comment these if you prefer committing some processed outputs)
+# data/processed/
+
+# But allow small sample/demo files to be tracked if needed:
+!data/raw/README.md
+!data/interim/README.md
+!data/processed/README.md
+
+# Common binary datasets/artifacts (anywhere)
+*.parquet
+*.feather
+*.arrow
+*.h5
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.joblib
+*.csv
+*.tsv
+*.xlsx
+*.zip
+*.gz
+*.bz2
+
+# If you want to commit *specific* outputs (override ignores), un-ignore like:
+# !data/processed/sentiment_features.parquet
+# !reports/event_study_CARs.parquet
+
+# ---- Reports & figures ----
+# Usually keep code-driven figures out; keep selective ones by exception.
+reports/figures/
+!reports/figures/README.md
+
+# Generated PDFs/Docs (keep only curated ones)
+*.pdf
+!reports/*.pdf
+# If you created a specific report you want to keep:
+# !/FinBERT_Event_Study_Report.pdf
+
+# ---- Model & cache directories ----
+# HuggingFace cache (large); regenerate on demand
+~/.cache/huggingface/
+# Sometimes cached locally within project:
+cache/
+.huggingface/
+
+# Transformers / HF artifacts that might appear
+*.bin
+*.safetensors
+
+# ---- Credentials (never commit secrets) ----
+*.env
+.env.*
+*.secret
+*.key
+*.pem
+*.credentials
