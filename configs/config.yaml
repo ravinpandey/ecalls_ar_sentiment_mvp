@@ -1,1 +1,21 @@
-# Project configuration will go here
+project: ecalls_ar_sentiment_mvp
+paths:
+  raw: "data/raw/Earnings Call Transcripts – NASDAQ (2016-2020)/Transcripts"
+  interim: data/interim
+  processed: data/processed
+  reports: reports
+finbert:
+  model_name: ProsusAI/finbert
+  max_tokens: 256
+  stride: 64
+event_study:
+  market: ^GSPC
+  window: [-3, 3]
+qna:
+  utterances: data/interim/utterances.parquet
+  utterances_scored: data/processed/utterances_scored.parquet
+  qa_pairs: data/processed/qa_pairs.parquet
+  finbert:
+    max_tokens: 256
+    stride: 64
+    batch_size: 16
